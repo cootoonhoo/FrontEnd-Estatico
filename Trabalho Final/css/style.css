@@ -1,0 +1,21 @@
+body{
+    
+    background-image: url("../images/snowforest.jpg");
+}
+
+.main{
+    height: 100vh;
+    width: 90vh;
+
+}
+
+.container{
+    background-color: black;
+    opacity: 0.5;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
