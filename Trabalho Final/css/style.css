@@ -14,6 +14,7 @@ button{
     color: white;
 }
 
+
 .container{
     width: 100vw;
     height: 100vh;
@@ -92,8 +93,6 @@ button{
 }
 
 .text{
-
-
     transition: height .5s cubic-bezier(0.47,-0.03, 0, 1),
     padding .5s cubic-bezier(0.47,-0.03, 0, 1),
     opacity 1s cubic-bezier(0.8,-0.54, 0.72, 0.45)
@@ -165,7 +164,7 @@ button{
     }
     
     .horizontalHr{
-        width: 50vw;
+        width: 600px;
     }
 
     .buttonsContainer hr{
@@ -193,6 +192,11 @@ button{
     }
 }
 
+@media only screen and (max-width: 700px){
+    .horizontalHr{
+        width: 85vw;
+    }
+}
 
 @media only screen and (max-height: 700px) {
     html{
@@ -201,9 +205,6 @@ button{
     
     .center-box{
         height: 700px;
-    }
-    .smallFont{
-        padding: 5px;
     }
 }
 
