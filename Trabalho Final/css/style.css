@@ -1,21 +1,215 @@
+@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Ubuntu:wght@300&display=swap);
+
 body{
-    
-    background-image: url("../images/snowforest.jpg");
+    background-image: url("../images/pexels-hristo-fidanov-1252869.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-.main{
-    height: 100vh;
-    width: 90vh;
+button{
+    background-color: rgba(0,0,0,0);
+    border: none;
 
+    color: white;
 }
 
 .container{
-    background-color: black;
-    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+
+    transition: background-color 2s cubic-bezier(0.79,-0.6, 0.7, 0.51);
+    background-color: none;
+
+}
+
+.buttonsContainer{
+    width: 600px;
+
+    justify-content: space-evenly;
+
+    display: flex;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.buttonsContainer a{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    padding: 12px;
+
+    transition: background-color 300ms;
+
+    text-decoration: none;
+}
+
+.buttonsContainer hr{
+    width: 1px;
+    height: 60px;
+    background-color: white;
+    margin: 0px;
+    border: 0px;
+}
+
+.buttonsContainer button{
+    width: 125px;
+}
+
+.buttonsContainer a:hover{
+    background-color: rgba(255,255,255, .2);
+}
+
+.flex-centralized{
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.center-box{
+    
+    width: 850px;
+    height: 550px;
+    background-color: rgba(0,0,0,.0); 
+
+    flex-direction: column;
+}
+
+.center-box img{
+    width: 60px;
+    height: 60px;
+
+    padding: 20px;
+}
+
+.logo{
+    border: 1px white solid;
+    border-radius: 100%;
+}
+
+.text{
+
+
+    transition: height .5s cubic-bezier(0.47,-0.03, 0, 1),
+    padding .5s cubic-bezier(0.47,-0.03, 0, 1),
+    opacity 1s cubic-bezier(0.8,-0.54, 0.72, 0.45)
+    ;
+
+    opacity: 1;
+    padding: 40px;
+    height: 100px;
+}
+
+
+.text h1{
+    font-family: 'Rubik';
+    font-size: 26px;
+    color: white;
+
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+
+    margin-bottom: 10px;
+}
+
+.text p{
+    max-width: 30vw;
+    text-align: center;
+}
+
+.verticalHr{
+    background-color: white;
+    margin: 0px;
+    border: 0px;
+    height: 50px;
+    width: 1px;
+}
+
+.horizontalHr{
+    background-color: white;
+    margin: 0px;
+    border: 0px;
+    height: 1px;
+    width: 750px;
+}
+
+.smallFont{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    line-height: 2;
+}
+
+.loadFadeOut{
+    background-color: black;
+}
+
+.loadText{
+    opacity: 0;
+    padding: 0px;
+    height: 0px;
+}
+
+@media only screen and (max-width: 1160px) {
+    .center-box{
+        height: 750px;
+    }
+    
+    .horizontalHr{
+        width: 50vw;
+    }
+
+    .buttonsContainer hr{
+        height: 1px;
+        width: 170px; 
+    }
+
+    .buttonsContainer{
+        width: 170px;
+
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #textOpening{
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .text p{
+        max-width: 600px;
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (max-height: 700px) {
+    html{
+        overflow: hidden;
+    }
+    
+    .center-box{
+        height: 700px;
+    }
+    .smallFont{
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 380px){
+    .smallFont{
+        line-height: 1.4;
+    }
 }
 
