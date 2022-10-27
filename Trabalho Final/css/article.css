@@ -1,40 +1,37 @@
-@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Ubuntu:wght@300&display=swap);
-
 .article-selected{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 40px;
-
-    width: 800px;
-    background-color: rgba(25, 25, 25, .7);
-}
-
-.article-selected img{
     width: 750px;
+    height: auto;
+
+
+    padding-top: 96px;
+    padding-bottom: 36px;
+    padding-right: 54px;
+    padding-left: 54px;
+
     border-radius: 5px;
+
+    background-color: rgba(25, 25, 25, .7);
+
 }
 
 .article-selected h2{
     text-transform: uppercase;
-    font-family: 'Rubik';
     letter-spacing: 0.4rem;
+    font-family: 'Rubik';
+    font-size: 30px;
     color: white;
+
     margin: 0;
-    margin-top: 40px;
-    padding-left: 25px;
 
     align-self: flex-start;
 }
 
 .article-selected hr{
-    width: 100px;
+    width: 120px;
     height: 1px;
     margin: 0;
     margin-top: 5px;
     margin-bottom: 30px;
-    margin-left: 25px;
 
     border: 0px;
     background-color: white;
@@ -42,10 +39,22 @@
     align-self: flex-start;
 }
 
+.article-selected img{
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    width: 750px;
+    border-radius: 5px;
+}
+
 .article-selected p{
     max-width: 750px;
 
     text-align: justify;
+    font-size: 20px;
+    line-height: 2rem;
+
+    margin-bottom: 50px;
 
     font-family: 'Ubuntu';
     color: white;
@@ -61,7 +70,7 @@
     
     transition: background-color 300ms;
 
-    translate: 350px -600px;
+    translate: 720px -880px;
 }
 
 #ExitButton img:hover{
