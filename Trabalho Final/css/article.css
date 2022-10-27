@@ -46,4 +46,25 @@
     max-width: 750px;
 
     text-align: justify;
+
+    font-family: 'Ubuntu';
+    color: white;
+}
+
+#ExitButton img{
+    position: absolute;
+    padding: 10px;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    
+    transition: background-color 300ms;
+
+    translate: 350px -600px;
+}
+
+#ExitButton img:hover{
+    background-color: rgba(255, 255, 255, .1);
+    cursor: pointer;
 }

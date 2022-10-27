@@ -15,27 +15,17 @@ introWrap.onclick = () =>{
     pageWrap.innerHTML= introHtml;
 }
 
-var introHtml ="<h1>INTRO</h1>"+
+var introHtml = "<div class='container article-selected'>"+
+"<h2>Intro</h2>"+
 "<hr>"+
-"<img src=''>"+
-"<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu."+
-"Proin aliquam facilisis ante interdum congue."+
-"Integer mollis, nisl amet convallis,"+
-"porttitor magna ullamcorper, amet egestas mauris."+
-"Ut magna finibus nisi nec lacinia."+
-"Nam maximus erat id euismod egestas."+
-"By the way, check out my awesome work.</p>"+
-""+
-"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit."+
-"Duis dapibus rutrum facilisis. Class aptent taciti sociosqu"+
-"ad litora torquent per conubia nostra, per inceptos"+
-"himenaeos. Etiam tristique libero eu nibh porttitor "+
-"fermentum. Nullam venenatis erat id vehicula viverra."+
-"Nunc ultrices eros ut ultricies condimentum."+
-"Mauris risus lacus, blandit sit amet venenatis non,"+
-"bibendum vitae dolor. Nunc lorem mauris, fringilla in "+
-"aliquam at, euismod in lectus. Pellentesque habitant morbi "+
-"tristique senectus et netus et malesuada fames ac turpis "+
-"egestas. In non lorem sit amet elit placerat maximus. "+
-"Pellentesque aliquam maximus risus, vel sed vehicula."+
-"</p> ";
+"<img src='./images/personWalking.jpg'>"+
+"<p>"+
+"Mussum Ipsum, cacilds vidis litro abertis. Sapien in "+"montipalavris qui num significa nadis i pareci latim."+"Detraxitconsequat et quo num tendi nada.Tá deprimidis, eu "+"conheçouma cachacis que pode alegrar sua vidis.Quem num gosta "+"dimé, boa gentis num é."+
+"</p>"+
+"<p>"+
+"Mussum Ipsum, cacilds vidis litro abertis. Cevadis imampola pa "+"arma uma pindureta.Todo mundo vê os porris que eutomo, mas "+"ninguém vê os tombis que eu levo!Detraxitconsequat et quo num "+"tendi nada.Praesent malesuada urnanisi, quis volutpat erat "+"hendrerit non. Nam vulputatedapibus."+
+"</p>"+
+"<div id='ExitButton'>"+
+"<img src= './images/reject.png'>"+
+"</div>"+
+"</div>"
