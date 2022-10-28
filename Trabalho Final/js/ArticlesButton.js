@@ -1,3 +1,6 @@
+const r = document.querySelector(':root');
+
+var bodyWrap = document.getElementsByTagName("body")[0];
 var pageWrap = document.getElementById("page");
 var introWrap = document.getElementById("Intro");
 var workWrap = document.getElementById("Work");
@@ -5,14 +8,6 @@ var aboutWrap = document.getElementById("About");
 var closebtnWrap = null;
 var pageSave = null;
 
-const r = document.querySelector(':root');
-
-window.addEventListener("mousemove", function(){
-    pageWrap = document.getElementById("page");
-    introWrap = document.getElementById("Intro");
-    aboutWrap = document.getElementById("About");
-    workWrap = document.getElementById("Work");
-})
 
 window.addEventListener("mousemove", () => {
     pageWrap = document.getElementById("page");
@@ -25,6 +20,7 @@ window.addEventListener("mousemove", () => {
             pageWrap.classList.add("fadingEffect");
             pageWrap.style.setProperty("opacity", 0);
             pageWrap.style.setProperty("transform", "scale(0.8)")
+            bodyWrap.style.setProperty('overflow-y', 'visible')
 
             setTimeout(function () {
                 pageWrap.style.setProperty("transform", "scale(1)")
@@ -41,6 +37,7 @@ window.addEventListener("mousemove", () => {
                     setTimeout(function () {
                         pageWrap.innerHTML = pageSave.innerHTML;
                         pageWrap.style.setProperty("opacity", 1); 
+                        bodyWrap.style.setProperty("overflow-y","hidden");
                     }, 1000);                    
                 }
             }, 1000);            
@@ -51,6 +48,7 @@ window.addEventListener("mousemove", () => {
         pageWrap.classList.add("fadingEffect");
         pageWrap.style.setProperty("opacity", 0);
         pageWrap.style.setProperty("transform", "scale(0.8)")
+        bodyWrap.style.setProperty("overflow-y","visible")
 
         setTimeout(function () {
             pageWrap.style.setProperty("transform", "scale(1)")
@@ -67,6 +65,7 @@ window.addEventListener("mousemove", () => {
                 setTimeout(function () {
                     pageWrap.innerHTML = pageSave.innerHTML;
                     pageWrap.style.setProperty("opacity", 1); 
+                    bodyWrap.style.setProperty("overflow-y","hidden");
                 }, 1000);                    
             }
         }, 1000);            
@@ -77,6 +76,7 @@ window.addEventListener("mousemove", () => {
         pageWrap.classList.add("fadingEffect");
         pageWrap.style.setProperty("opacity", 0);
         pageWrap.style.setProperty("transform", "scale(0.8)")
+        bodyWrap.style.setProperty("overflow-y","visible")
 
         setTimeout(function () {
             pageWrap.style.setProperty("transform", "scale(1)")
@@ -92,15 +92,13 @@ window.addEventListener("mousemove", () => {
                 pageWrap.style.setProperty("opacity", 0);
                 setTimeout(function () {
                     pageWrap.innerHTML = pageSave.innerHTML;
-                    pageWrap.style.setProperty("opacity", 1); 
+                    pageWrap.style.setProperty("opacity", 1);
+                    bodyWrap.style.setProperty("overflow-y","hidden");
                 }, 1000);                    
             }
         }, 1000);            
     }
 });
-
-var content1 = 'Mussum Ipsum, cacilds vidis litro abertis. Cevadisim ampola pa arma uma pindureta.Todo mundo vê osporris que eu tomo, mas ninguém vê os tombis que eulevo!Detraxit consequat et quo num tendi nadaPraesent malesuada urna nisi, quis volutpat erathendrerit non. Nam vulputate dapibus.'
-var content2 = "Mussum Ipsum, cacilds vidis litro abertis. Cevadisim ampola pa arma uma pindureta.Todo mundo vê osporris que eu tomo, mas ninguém vê os tombis que eulevo!Detraxit consequat et quo num tendi nadaPraesent malesuada urna nisi, quis volutpat erathendrerit non. Nam vulputate dapibus."
 
 function creatArticleHtml(title, imagepath, content1, content2){
     var articleHtml = 
@@ -119,3 +117,6 @@ function creatArticleHtml(title, imagepath, content1, content2){
     "</div>"
     return articleHtml;
 }
+
+var content1 = 'Mussum Ipsum, cacilds vidis litro abertis. Cevadisim ampola pa arma uma pindureta.Todo mundo vê osporris que eu tomo, mas ninguém vê os tombis que eulevo!Detraxit consequat et quo num tendi nadaPraesent malesuada urna nisi, quis volutpat erathendrerit non. Nam vulputate dapibus.'
+var content2 = "Mussum Ipsum, cacilds vidis litro abertis. Cevadisim ampola pa arma uma pindureta.Todo mundo vê osporris que eu tomo, mas ninguém vê os tombis que eulevo!Detraxit consequat et quo num tendi nadaPraesent malesuada urna nisi, quis volutpat erathendrerit non. Nam vulputate dapibus."

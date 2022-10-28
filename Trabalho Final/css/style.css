@@ -5,8 +5,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
-    overflow-y: visible;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
 }
 
 button{
@@ -14,6 +15,10 @@ button{
     border: none;
 
     color: white;
+}
+
+.page{
+    transform: scale(1);
 }
 
 .container{

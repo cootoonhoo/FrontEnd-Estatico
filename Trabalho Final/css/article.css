@@ -15,7 +15,7 @@
     border-radius: 5px;
 
     background-color: rgba(25, 25, 25, .7);
-
+    
 }
 
 .article-selected h2{
@@ -73,4 +73,60 @@
 #ExitButton img:hover{
     background-color: rgba(255, 255, 255, .1);
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1160px) {
+    .article-selected{
+        width: 600px;
+    }
+    .article-selected img{    
+        width: 600px;
+    }
+    #ExitButton img{
+        translate: 560px -860px;
+    }
+}
+
+@media only screen and (max-width: 880px){
+    .article-selected{
+        width: 400px;
+        padding-left: 74px;
+        padding-right: 74px;
+    }
+
+    .article-selected img{    
+        width: 400px;
+    }
+
+    .article-selected p{
+        font-size: 18px;
+        line-height: 1.5rem;
+    }
+
+    #ExitButton img{
+        translate: 400px -820px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .article-selected{
+        width: 200px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .article-selected img{    
+        width: 200px;
+    }
+
+    .article-selected p{
+        font-size: 16px;
+        line-height: 1.1rem;
+    }
+
+    #ExitButton img{
+        translate: 400px -820px;
+    }
 }
