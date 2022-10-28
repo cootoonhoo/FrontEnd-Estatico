@@ -2,10 +2,13 @@ const r = document.querySelector(':root');
 
 var bodyWrap = document.getElementsByTagName("body")[0];
 var pageWrap = document.getElementById("page");
-var introWrap = document.getElementById("Intro");
-var workWrap = document.getElementById("Work");
-var aboutWrap = document.getElementById("About");
+
+var introWrap = null;
+var workWrap = null;
+var aboutWrap = null;
+var contactWrap = null;
 var closebtnWrap = null;
+
 var pageSave = null;
 
 
@@ -14,8 +17,10 @@ window.addEventListener("mousemove", () => {
     introWrap = document.getElementById("Intro");
     aboutWrap = document.getElementById("About");
     workWrap = document.getElementById("Work");
+    contactWrap = document.getElementById("Contact");
 
     // Work button
+    if(introWrap != null)
     introWrap.onclick = () =>{
             pageWrap.classList.add("fadingEffect");
             pageWrap.style.setProperty("opacity", 0);
@@ -44,6 +49,7 @@ window.addEventListener("mousemove", () => {
     }
 
     // About button
+    if(aboutWrap != null)
     aboutWrap.onclick = () =>{
         pageWrap.classList.add("fadingEffect");
         pageWrap.style.setProperty("opacity", 0);
@@ -72,6 +78,7 @@ window.addEventListener("mousemove", () => {
     }
 
     //Work button
+    if(workWrap != null)
     workWrap.onclick = () =>{
         pageWrap.classList.add("fadingEffect");
         pageWrap.style.setProperty("opacity", 0);
@@ -83,6 +90,34 @@ window.addEventListener("mousemove", () => {
             pageSave = pageWrap.cloneNode(true);
             r.style.setProperty('--border-margin', '85%');
             pageWrap.innerHTML= creatArticleHtml('Work', 'Code.jpg', content1, content2);
+
+            pageWrap.style.setProperty("opacity", 1);
+
+            closebtnWrap = document.getElementById  ("ExitButton");
+
+            closebtnWrap.onclick = () =>{
+                pageWrap.style.setProperty("opacity", 0);
+                setTimeout(function () {
+                    pageWrap.innerHTML = pageSave.innerHTML;
+                    pageWrap.style.setProperty("opacity", 1);
+                    bodyWrap.style.setProperty("overflow-y","hidden");
+                }, 1000);                    
+            }
+        }, 1000);            
+    }
+
+    if(contactWrap != null)
+    contactWrap.onclick = () =>{
+        pageWrap.classList.add("fadingEffect");
+        pageWrap.style.setProperty("opacity", 0);
+        pageWrap.style.setProperty("transform", "scale(0.8)")
+        bodyWrap.style.setProperty("overflow-y","visible")
+
+        setTimeout(function () {
+            pageWrap.style.setProperty("transform", "scale(1)")
+            pageSave = pageWrap.cloneNode(true);
+            r.style.setProperty('--border-margin', '78%');
+            pageWrap.innerHTML= createContactFormHtml();
 
             pageWrap.style.setProperty("opacity", 1);
 
@@ -115,6 +150,27 @@ function creatArticleHtml(title, imagepath, content1, content2){
             "<img src='./images/reject.png'>"+
         "</div>"+
     "</div>"
+    return articleHtml;
+}
+
+function createContactFormHtml(){
+    var articleHtml = 
+    "<div class='article-selected'>" +
+        "<h2>Contact</h2>"+
+        "<form>"+
+            "<label for='User'>Name</label>"+
+            "<input type='text' id='User' name='Name' />"+
+
+            "<label for='Email'>Email</label>"+
+            "<input type='email' id='Email' name='Email' />"+
+
+            "<label for='Menssage'>Menssage</label>"+
+            "<input type='text' id='Menssage' name='Menssage' />"+
+
+            "<input type='submit' id='Submit' name='Submit' />"+
+            "<input type='button' id='Reset' name='Reset'  value='Reset'/>"+
+        "</form>"+
+    "</div>" 
     return articleHtml;
 }
 

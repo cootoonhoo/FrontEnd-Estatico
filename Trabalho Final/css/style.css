@@ -4,10 +4,11 @@ body{
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: 0px -200px;
     overflow-x: hidden;
     overflow-y: hidden;
 
+    position: relative;
 }
 
 button{
@@ -204,19 +205,25 @@ button{
     }
 }
 
-@media only screen and (max-width: 700px){
-    .horizontalHr{
-        width: 85vw;
+@media only screen and (max-width: 1940px){
+    body{
+        background-position: 0px 0px;
     }
 }
 
 @media only screen and (max-height: 700px) {
-    html{
-        overflow: hidden;
+    .horizontalHr{
+        width: 85vw;
     }
     
     .center-box{
         height: 700px;
+    }
+}
+
+@media only screen and (max-width: 520px){
+    .container{
+        padding-top: 20px;
     }
 }
 
@@ -225,4 +232,3 @@ button{
         line-height: 1.4;
     }
 }
-
