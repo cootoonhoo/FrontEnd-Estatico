@@ -1,3 +1,7 @@
+:root{
+    --border-margin : 0%;
+}
+
 .article-selected{
     width: 750px;
     height: auto;
@@ -22,22 +26,15 @@
     color: white;
 
     margin: 0;
-
-    align-self: flex-start;
-}
-
-.article-selected hr{
-    width: 120px;
-    height: 1px;
-    margin: 0;
-    margin-top: 5px;
     margin-bottom: 30px;
-
-    border: 0px;
-    background-color: white;
+    margin-right: var(--border-margin);
+    padding-bottom: 10px;
 
     align-self: flex-start;
+
+    border-bottom: solid 1px #ffffff;
 }
+
 
 .article-selected img{
     margin-top: 10px;

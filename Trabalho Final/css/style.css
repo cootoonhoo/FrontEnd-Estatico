@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Ubuntu:wght@300&display=swap);
 
 body{
-    background-image: url("../images/pexels-hristo-fidanov-1252869.jpg");
+    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -16,7 +16,6 @@ button{
     color: white;
 }
 
-
 .container{
     padding-top: 100px;
     padding-bottom: 100px;
@@ -26,6 +25,10 @@ button{
 
     transition: background-color 2s cubic-bezier(0.79,-0.6, 0.7, 0.51);
     background-color: none;
+}
+
+.fadingEffect{
+    transition: opacity 1s, transform 1s;
 }
 
 .buttonsContainer{
