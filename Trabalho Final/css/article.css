@@ -57,6 +57,90 @@
     color: white;
 }
 
+.FormsLabel{
+    width: 750px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.InnerForms{
+    display: flex;
+    flex-direction: column;
+}
+
+.InnerForms label{
+    color: white;
+    font-family: 'Ubuntu';
+    text-transform:uppercase;
+    letter-spacing: 4px;
+
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.InnerForms label{
+    color: white;
+    font-family: 'Ubuntu';
+    text-transform:uppercase;
+    letter-spacing: 4px;
+
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-top: 25px;
+}
+
+.InnerForms input{
+    width: 320px;
+    height: 40px;
+
+    background-color: rgba(255, 255, 255, .0);
+    border: white 1px solid;
+    border-radius: 5px;
+
+    color: white;
+    font-family: 'Ubuntu';
+    font-size: 18px;
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.InnerForms textarea{
+    width: auto;
+    height: 175px;
+    padding: 10px;
+
+    text-align: start;
+    align-items: flex-start;
+    resize: none;
+    box-sizing: border-box;
+
+    background-color: rgba(255, 255, 255, .0);
+    border: white 1px solid;
+    border-radius: 5px;
+
+    color: white;
+    font-family: 'Ubuntu';
+    font-size: 18px;
+
+    transition: background 400ms;
+    cursor: text;
+}
+
+input{
+    transition: background 400ms;
+    cursor: text;
+}
+
+input:focus{
+    background-color: rgba(255, 255, 255, .1);
+}
+
+textarea:focus{
+    background-color: rgba(255, 255, 255, .1);
+}
+
 #ExitButton img{
     position: absolute;
     padding: 10px;
@@ -127,6 +211,6 @@
     }
 
     #ExitButton img{
-        translate: 400px -820px;
+        translate: 160px -760px;
     }
 }

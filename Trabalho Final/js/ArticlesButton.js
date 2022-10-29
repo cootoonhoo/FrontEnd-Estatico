@@ -158,15 +158,22 @@ function createContactFormHtml(){
     "<div class='article-selected'>" +
         "<h2>Contact</h2>"+
         "<form>"+
-            "<label for='User'>Name</label>"+
-            "<input type='text' id='User' name='Name' />"+
+            "<div class = 'FormsLabel'>"+
+                "<div class='InnerForms'>"+
+                    "<label for='User'>Name</label>"+
+                    "<input type='text' id='User' name='Name' />"+
+                "</div>"+
 
-            "<label for='Email'>Email</label>"+
-            "<input type='email' id='Email' name='Email' />"+
+                "<div class='InnerForms'>"+
+                    "<label for='Email'>Email</label>"+
+                    "<input type='email' id='Email' name='Email' />"+
+                "</div>"+
+            "</div>"+
 
-            "<label for='Menssage'>Menssage</label>"+
-            "<input type='text' id='Menssage' name='Menssage' />"+
-
+            "<div class='InnerForms'>"+
+                "<label for='Menssage'>Menssage</label>"+
+                "<textarea></textarea>"+
+            "</div>"+
             "<input type='submit' id='Submit' name='Submit' />"+
             "<input type='button' id='Reset' name='Reset'  value='Reset'/>"+
         "</form>"+
