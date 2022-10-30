@@ -121,6 +121,17 @@ window.addEventListener("mousemove", () => {
 
             pageWrap.style.setProperty("opacity", 1);
 
+            var resetBtn = document.getElementById('Reset');
+            var nameText = document.getElementById('User');
+            var emailText = document.getElementById('Email');
+            var textarea = document.getElementsByTagName('textarea')[0];
+
+            resetBtn.onclick = () =>{
+                nameText.value='';
+                emailText.value='';
+                textarea.value='';
+            }
+
             closebtnWrap = document.getElementById  ("ExitButton");
 
             closebtnWrap.onclick = () =>{
@@ -174,10 +185,19 @@ function createContactFormHtml(){
                 "<label for='Menssage'>Menssage</label>"+
                 "<textarea></textarea>"+
             "</div>"+
-            "<input type='submit' id='Submit' name='Submit' />"+
-            "<input type='button' id='Reset' name='Reset'  value='Reset'/>"+
+            "<input class='formsButtons' type='submit' id='Submit' name='Submit' />"+
+            "<input class='formsButtons' type='button' id='Reset' name='Reset'  value='Reset'/>"+
         "</form>"+
-    "</div>" 
+        "<div id='ExitButton' class='Contact'>"+
+            "<img src='./images/reject.png'>"+
+        "</div>"+
+        "<div class='icons'>"+
+            "<i class='fa-brands fa-twitter'></i>"+
+            "<i class='fa-brands fa-facebook'></i>"+
+            "<i class='fa-brands fa-instagram'></i>"+
+            "<i class='fa-brands fa-github'></i>"+
+        "</div>"
+    "</div>"
     return articleHtml;
 }
 

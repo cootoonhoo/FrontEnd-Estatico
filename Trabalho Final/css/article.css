@@ -141,6 +141,56 @@ textarea:focus{
     background-color: rgba(255, 255, 255, .1);
 }
 
+.formsButtons{
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 20px 50px;
+    
+    font-family: 'Ubuntu';
+    font-size: 18px;
+
+    border: white solid 1px;
+    border-radius: 5px;
+
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.icons{
+    margin-top: 40px;
+    color: white;
+    font-size: 20px;
+}
+
+i{
+    padding: 10px;
+    border: white solid 1px;
+
+    border-radius: 100%;
+    transition: background-color 300ms;
+
+    margin-right: 20px;
+}
+i:hover{
+    background-color: rgba(255, 255, 255, .1);
+}
+
+#Reset{
+    background-color: rgba(255, 255, 255, .0);
+    color: white;
+    transition: background 400ms;
+    cursor: pointer;
+}
+
+#Reset:hover{
+    background-color: rgba(255, 255, 255, .1); 
+}
+
+#Submit{
+    cursor: pointer;
+}
+
+
 #ExitButton img{
     position: absolute;
     padding: 10px;
@@ -159,6 +209,10 @@ textarea:focus{
     cursor: pointer;
 }
 
+div:has(form) #ExitButton {
+    translate: 0px 310px;
+}
+
 @media only screen and (max-width: 1160px) {
     .article-selected{
         width: 600px;
@@ -168,6 +222,14 @@ textarea:focus{
     }
     #ExitButton img{
         translate: 560px -860px;
+    }
+
+    .FormsLabel{
+        width: 625px;
+    }
+
+    .FormsLabel input{
+        width: 265px;
     }
 }
 
@@ -188,13 +250,28 @@ textarea:focus{
     }
 
     #ExitButton img{
-        translate: 400px -820px;
+        translate: 400px -970px;
     }
+
+    .FormsLabel{
+        flex-direction: column;
+
+        width: 425px;
+    }
+
+    .FormsLabel input{
+        width: 93%;
+    }
+
+    .article-selected:has(p) #ExitButton img{
+        translate: 400px -810px;
+    }
+
 }
 
 @media only screen and (max-width: 650px){
     .article-selected{
-        width: 200px;
+        width: 50%;
         padding-top: 40px;
         padding-bottom: 20px;
         padding-left: 30px;
@@ -202,7 +279,7 @@ textarea:focus{
     }
 
     .article-selected img{    
-        width: 200px;
+        width: 50vw;
     }
 
     .article-selected p{
@@ -210,7 +287,82 @@ textarea:focus{
         line-height: 1.1rem;
     }
 
+    .article-selected h2{
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+
     #ExitButton img{
         translate: 160px -760px;
+    }
+
+    .FormsLabel{
+        flex-direction: column;
+
+        width: 350px;
+    }
+
+    .FormsLabel input{
+        width: 43vw;
+    }
+
+    #ExitButton img{
+        translate: 40vw -1015px;
+    }
+    .article-selected:has(p) #ExitButton img{
+        translate: 43vw -69vh;
+    }
+}
+
+@media only screen and (max-width: 510px){
+    .article-selected:has(p) #ExitButton img{
+        translate: 43vw -73vh;
+    }
+}
+
+
+@media only screen and (max-width: 425px){
+    #ExitButton img{
+        translate: 170px -1015px;
+    }
+
+    .article-selected:has(p) #ExitButton img{
+        translate: 43vw -730px;
+    }
+
+    i{
+        font-size: 10px;
+    }
+
+    .formsButtons{
+        padding: 5vw;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    #ExitButton img{
+        translate: 40vw -1015px;
+    }
+
+    .article-selected:has(p) #ExitButton img{
+        translate: 43vw -810px;
+    }
+
+    i{
+        margin-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    #ExitButton img{
+        translate: 40vw -1000px;
+    }
+
+    .article-selected:has(p) #ExitButton img{
+        translate: 40vw -880px;
+    }
+
+    i{
+        margin-right: 5px;
     }
 }
